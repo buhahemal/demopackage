@@ -9,6 +9,11 @@
             "email": "buhahemal10@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "demopackage//":"src/"
+        }
+    },
     "minimum-stability": "stable",
     "require": {}
 }
