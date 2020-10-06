@@ -1,0 +1,14 @@
+{
+    "name": "hemalbuha/demopackage",
+    "description": "This Is For Demo Purpose Only",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hemal Buha",
+            "email": "buhahemal10@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
