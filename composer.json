@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "demopackage//":"src/"
+            "demopackage\\":"src/"
         }
     },
     "minimum-stability": "stable",
