@@ -5,8 +5,7 @@ class Courses
 {
     public function GetAllCourse()
     {
-      $Courses = new Edminglecurl('/institute/1/courses','GET','0');
+      $Allcourse = new Edminglecurl('/institute/1/courses','GET','0');
+      return json_decode($Allcourse->Get_curl_no_auth());
     }
 }
-$c = new Courses();
-$c->GetAllCourse();

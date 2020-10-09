@@ -64,13 +64,13 @@ class Edminglecurl
             CURLOPT_CUSTOMREQUEST => $this->type
         ));
 
-        $response = curl_exec($curl);
+        $this->response = curl_exec($curl);
         if (curl_errno($curl))
         {
             echo '["code":3002,"message":' . curl_error($curl) . ']';
         }
         curl_close($curl);
-        echo $response;
+        return $this->response;
     }
 }
 
