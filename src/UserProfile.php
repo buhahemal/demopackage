@@ -1,33 +1,13 @@
 <?php 
 namespace demopackage;
-include('config_file.php');
+require('Edminglecurl.php');
 class UserProfile
 {
-    public function Usermeta($apikey)
+    public function Usermeta()
     {
-        $curl = curl_init(); 
-    
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => constant("API_URL") . '/user/usermeta',
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
-        CURLOPT_HTTPHEADER => array(
-            'APIKEY:' . $apikey
-        )
-    ));
-    
-    $response = curl_exec($curl);
-    if(curl_errno($curl)){
-      echo '["code":3002,"message":'.curl_error($curl).']';
-    }
-    curl_close($curl);
-    echo $response;
+        $p = new Edminglecurl('/user/usermeta','GET','1');
+        return json_decode($p->Get_curl_auth());
     }
 }
-$a= new UserProfile();
-$a->Usermeta('f33e18e167552b7f96b9c148a734d88e');
+
+
