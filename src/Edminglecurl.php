@@ -1,23 +1,25 @@
 <?php
 namespace demopackage;
-require ('config_file.php');
+require('config_file.php');
 class Edminglecurl
 {
     private $url;
     private $type;
     private $isauth;
+    private $apikey;
     public $response;
-    function __construct($url, $type, $isauth)
+    function __construct($url, $type, $isauth, $apikey= '')
     {
         $this->url = $url;
         $this->type = $type;
         $this->isauth = $isauth;
+        $this->apikey = $apikey;
     }
 
     function Get_curl_auth()
     {
 
-      if ((isset($_SESSION['apikey']) && $this->isauth))
+      if ($this->isauth)
       {
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -30,7 +32,7 @@ class Edminglecurl
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => $this->type,
             CURLOPT_HTTPHEADER => array(
-                'APIKEY:' . $_SESSION['apikey']
+                'APIKEY:' . $this->apikey
             )
         ));
 
@@ -51,6 +53,7 @@ class Edminglecurl
     }
     public function Get_curl_no_auth()
     {
+        
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
