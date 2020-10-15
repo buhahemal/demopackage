@@ -13,5 +13,3 @@ class UserProfile extends auth
         return json_decode($User->Get_curl_auth());
     }
 }
-$u = new UserProfile('f33e18e167552b7f96b9c148a734d88e');
-print_r($u->Usermeta());
