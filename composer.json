@@ -1,17 +1,10 @@
 {
-    "name": "hemalbuha/demopackage",
-    "description": "This Is For Demo Purpose Only",
+    "name": "edmingle/edmingle_php_sdk",
+    "description": "SDK For Edmingle Online System In PHP",
     "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Hemal Buha",
-            "email": "buhahemal10@gmail.com"
-        }
-    ],
     "autoload": {
         "psr-4": {
-            "demopackage\\":"src/"
+            "edmingle_php_sdk\\":"src/"
         }
     },
     "minimum-stability": "stable",

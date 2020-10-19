@@ -1,5 +1,5 @@
 <?php
-namespace demopackage;
+namespace edmingle_php_sdk;
 require('config_file.php');
 class Edminglecurl
 {

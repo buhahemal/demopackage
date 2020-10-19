@@ -1,5 +1,5 @@
 <?php 
-namespace demopackage;
+namespace edmingle_php_sdk;
 require('Edminglecurl.php');
 require('auth.php');
 class UserProfile extends auth
