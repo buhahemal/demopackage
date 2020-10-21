@@ -10,6 +10,6 @@ class UserProfile extends auth
     public function Usermeta()
     {
         $User = new Edminglecurl('/user/usermeta','GET','1',$this->get_apikey());
-        return json_decode($User->Get_curl_auth());
+        return $User->Get_curl_auth();
     }
 }

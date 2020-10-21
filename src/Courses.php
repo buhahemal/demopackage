@@ -6,19 +6,19 @@ class Courses
     public function GetAllCourse()
     {
       $Allcourse = new Edminglecurl('/institute/1/courses','GET','0');
-      return json_decode($Allcourse->Get_curl_no_auth());
+      return $Allcourse->Get_curl_no_auth();
     }
 
     public function CourseDetail($course_id)
     {
       $course_detail = new Edminglecurl('/bundles/'.$course_id.'','GET','0');
-      return json_decode($course_detail->Get_curl_no_auth());
+      return $course_detail->Get_curl_no_auth();
     }
 
     public function CourseSchedule($course_id)
     {
       $course_schedule = new Edminglecurl('/public/bundle/'.$course_id.'/schedule','GET','0');
-      return json_decode($course_schedule->Get_curl_no_auth());
+      return $course_schedule->Get_curl_no_auth();
     }
 
 

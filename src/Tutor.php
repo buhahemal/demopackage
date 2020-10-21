@@ -6,7 +6,7 @@ class Tutor
     public function Tutor_info($id)
     {
       $Tutor_info = new Edminglecurl('/tutor/'.$id.'/profile/public','GET','0');
-      return json_decode($Tutor_info->Get_curl_no_auth());
+      return $Tutor_info->Get_curl_no_auth();
     }
 }
 //$t = new Tutor();
