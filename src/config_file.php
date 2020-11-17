@@ -1,3 +1,3 @@
 <?php 
-define("API_URL","http://www.edupanion.com/nuSource/api/v1");
+define("API_URL","http://vyomalabs.edupanion.com/nuSource/api/v1");
 ?>

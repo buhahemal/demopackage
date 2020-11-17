@@ -55,7 +55,7 @@ class Edminglecurl
     {
         
         $curl = curl_init();
-
+        //echo constant("API_URL") . $this->url;
         curl_setopt_array($curl, array(
             CURLOPT_URL => constant("API_URL") . $this->url,
             CURLOPT_RETURNTRANSFER => true,
